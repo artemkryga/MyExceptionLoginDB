@@ -9,4 +9,13 @@ public class MyException extends SQLException {
         super(reason);
         this.login = login;
     }
+
+    public String getLogin() {
+        return login;
+    }
+
+    @Override
+    public String getMessage() {
+        return getLogin();
+    }
 }

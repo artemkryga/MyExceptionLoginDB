@@ -5,4 +5,7 @@ public interface TextConstants {
     String LOGIN_DATA = "input.login.data";
     String WRONG_INPUT_DATA = "input.wrong.data";
     String PASSWORD_DATA = "input.password.data";
+    String WORD_LOGIN = "word.login";
+    String WORDS_EXCEPTION = "words.exception";
+    String SPACE = " ";
 }

@@ -2,8 +2,7 @@ package ua.kryha.view;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import static ua.kryha.view.TextConstants.INPUT_STRING_DATA;
-import static ua.kryha.view.TextConstants.WRONG_INPUT_DATA;
+import static ua.kryha.view.TextConstants.*;
 
 
 public class View {
@@ -17,6 +16,10 @@ public class View {
     public void printMessage(String message){
         System.out.println(message);
     }
+    public void printMessageExcBundle(String login){
+        printMessage(bundle.getString(WORD_LOGIN) + SPACE + login + SPACE + bundle.getString(WORDS_EXCEPTION));
+    }
+
 
     public String concatenationString(String... message){
         StringBuilder concatString = new StringBuilder();
@@ -31,6 +34,7 @@ public class View {
                 bundle.getString(INPUT_STRING_DATA),
                 bundle.getString(message)));
     }
+
 
     public void printWrongStringInput(String message) {
         printMessage(concatenationString(
